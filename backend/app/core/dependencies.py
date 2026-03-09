@@ -37,7 +37,11 @@ async def get_current_user(
     try:
         claims = await verify_clerk_jwt(token, settings.CLERK_JWKS_URL)
     except JWTError as e:
-        raise DiaspoFinanceError(message=f"Invalid token: {e}") from e
+        raise DiaspoFinanceError(
+            message=f"Invalid token: {e}",
+            code="UNAUTHORIZED",
+            status_code=401,
+        ) from e
 
     clerk_id = claims["sub"]
 

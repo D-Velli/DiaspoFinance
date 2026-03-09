@@ -2,17 +2,17 @@ import { SignUp } from "@clerk/nextjs";
 
 export default function SignupPage() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[#F9FAFB]">
+    <main className="flex min-h-screen items-center justify-center bg-background">
       <SignUp
         appearance={{
           elements: {
             rootBox: "mx-auto",
-            card: "shadow-sm border border-[#E5E7EB] rounded-xl",
-            headerTitle: "text-[#111827] font-semibold",
-            headerSubtitle: "text-[#374151]",
+            card: "shadow-sm border border-border rounded-xl",
+            headerTitle: "text-foreground font-semibold",
+            headerSubtitle: "text-muted-foreground",
             formButtonPrimary:
-              "bg-[#1A4175] hover:bg-[#0F2B4C] min-h-[44px]",
-            footerActionLink: "text-[#2563EB]",
+              "bg-primary hover:bg-secondary-foreground min-h-[44px]",
+            footerActionLink: "text-[var(--primary-500)]",
           },
         }}
       />

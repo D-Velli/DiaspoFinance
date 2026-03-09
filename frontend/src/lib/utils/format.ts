@@ -44,6 +44,10 @@ export function formatRelativeTime(
 
   if (Math.abs(diffDays) < 1) {
     const diffHours = Math.round(diffMs / (1000 * 60 * 60));
+    if (Math.abs(diffHours) < 1) {
+      const diffMinutes = Math.round(diffMs / (1000 * 60));
+      return rtf.format(diffMinutes, "minute");
+    }
     return rtf.format(diffHours, "hour");
   }
   if (Math.abs(diffDays) < 30) {

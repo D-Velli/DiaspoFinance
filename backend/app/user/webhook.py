@@ -31,7 +31,11 @@ async def handle_clerk_webhook(
         event = wh.verify(body, headers)
     except WebhookVerificationError:
         logger.error("webhook.clerk.invalid_signature")
-        raise DiaspoFinanceError(message="Invalid webhook signature")
+        raise DiaspoFinanceError(
+            message="Invalid webhook signature",
+            code="WEBHOOK_INVALID",
+            status_code=400,
+        )
 
     event_type = event.get("type")
     data = event.get("data", {})
@@ -60,4 +64,4 @@ async def handle_clerk_webhook(
         )
         logger.info("webhook.clerk.user_updated", clerk_id=data["id"])
 
-    return {"status": "ok"}
+    return {"data": {"status": "ok"}}

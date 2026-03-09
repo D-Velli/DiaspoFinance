@@ -12,6 +12,7 @@ from sqlalchemy.ext.asyncio import create_async_engine
 from app.core.config import settings
 from app.core.database import Base
 from app.user.models import User  # noqa: F401 — register models
+from app.tontine.models import Tontine, TontineMember  # noqa: F401 — register models
 
 config = context.config
 if config.config_file_name is not None:

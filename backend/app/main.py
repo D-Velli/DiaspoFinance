@@ -8,7 +8,9 @@ from fastapi import FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import settings
-from app.core.exceptions import DiaspoFinanceError, diaspofinance_error_handler
+from app.core.exceptions import DiaspoFinanceError, diaspofinance_error_handler, generic_error_handler
+from app.tontine.router import public_router as invite_router
+from app.tontine.router import router as tontine_router
 from app.user.router import router as user_router
 from app.user.webhook import router as webhook_router
 
@@ -54,6 +56,7 @@ app.add_middleware(
 
 # Exception handlers
 app.add_exception_handler(DiaspoFinanceError, diaspofinance_error_handler)
+app.add_exception_handler(Exception, generic_error_handler)
 
 
 # Request ID middleware
@@ -70,6 +73,8 @@ async def request_id_middleware(request: Request, call_next) -> Response:
 # Routers
 app.include_router(user_router, prefix="/api/v1")
 app.include_router(webhook_router, prefix="/api/v1")
+app.include_router(tontine_router, prefix="/api/v1")
+app.include_router(invite_router, prefix="/api/v1")
 
 
 # Health check

@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { ClerkProvider } from "@clerk/nextjs";
 import { frFR, enUS } from "@clerk/localizations";
@@ -26,24 +26,31 @@ export const viewport: Viewport = {
   themeColor: "#1A4175",
 };
 
-export const metadata: Metadata = {
-  title: "DiaspoFinance — Tontine digitale pour la diaspora",
-  description:
-    "Faites une tontine sans vous fâcher avec vos amis. Collecte automatique, distribution transparente, zéro stress.",
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "default",
-    title: "DiaspoFinance",
-  },
-  openGraph: {
-    title: "DiaspoFinance — Tontine digitale pour la diaspora",
-    description:
-      "Faites une tontine sans vous fâcher avec vos amis. Collecte automatique, distribution transparente, zéro stress.",
-    type: "website",
-    locale: "fr_FR",
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
-  },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: "default",
+      title: "DiaspoFinance",
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      type: "website",
+      locale: locale === "fr" ? "fr_FR" : "en_CA",
+      images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+    },
+  };
+}
 
 export default async function LocaleLayout({
   children,

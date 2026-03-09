@@ -8,7 +8,7 @@ import pytest
 async def test_webhook_invalid_signature_returns_500(client):
     """Test that invalid SVIX signature is rejected."""
     with patch("app.user.webhook.settings") as mock_settings:
-        mock_settings.CLERK_WEBHOOK_SECRET = "whsec_test123456789012345678901234"
+        mock_settings.CLERK_WEBHOOK_SECRET = "test_fake_secret_for_unit_tests"
 
         response = await client.post(
             "/api/v1/webhooks/clerk",
@@ -21,14 +21,14 @@ async def test_webhook_invalid_signature_returns_500(client):
             },
         )
 
-        assert response.status_code == 500
+        assert response.status_code == 400
 
 
 @pytest.mark.asyncio
 async def test_webhook_missing_headers_returns_500(client):
     """Test that missing SVIX headers results in error."""
     with patch("app.user.webhook.settings") as mock_settings:
-        mock_settings.CLERK_WEBHOOK_SECRET = "whsec_test123456789012345678901234"
+        mock_settings.CLERK_WEBHOOK_SECRET = "test_fake_secret_for_unit_tests"
 
         response = await client.post(
             "/api/v1/webhooks/clerk",
@@ -36,4 +36,4 @@ async def test_webhook_missing_headers_returns_500(client):
             headers={"Content-Type": "application/json"},
         )
 
-        assert response.status_code == 500
+        assert response.status_code == 400

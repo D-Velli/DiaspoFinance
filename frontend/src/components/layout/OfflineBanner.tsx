@@ -26,7 +26,7 @@ export function OfflineBanner() {
   if (!isOffline) return null;
 
   return (
-    <div className="flex items-center justify-center gap-2 bg-[#FEF3C7] px-4 py-2 text-sm text-[#D97706]">
+    <div className="flex items-center justify-center gap-2 bg-[var(--warning-light)] px-4 py-2 text-sm text-[var(--warning)]">
       <WifiOff className="h-4 w-4" />
       <span>{t("banner")}</span>
     </div>

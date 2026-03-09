@@ -55,10 +55,16 @@ async def verify_clerk_jwt(token: str, jwks_url: str) -> dict:
         raise JWTError(f"No matching key found for kid: {kid}")
 
     public_key = jwk.construct(matching_key)
+
+    # Derive expected issuer from JWKS URL
+    # https://foo.clerk.accounts.dev/.well-known/jwks.json -> https://foo.clerk.accounts.dev
+    expected_issuer = jwks_url.replace("/.well-known/jwks.json", "")
+
     claims = jwt.decode(
         token,
         public_key,
         algorithms=["RS256"],
+        issuer=expected_issuer,
         options={"verify_aud": False},
     )
 
