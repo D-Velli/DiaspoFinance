@@ -1,0 +1,80 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+venv_*/
+.venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment
+.env
+.env_*
+!.env.example
+.env.local
+.env.*.local
+
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Alembic
+alembic/versions/*.pyc
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node / Next.js / pnpm
+node_modules/
+dist/
+dist-ssr/
+build/
+*.local
+.npm
+.yarn
+.pnp.*
+.next/
+out/
+.turbo/
+.vercel
+
+# ESLint / Prettier
+.eslintcache
+.prettiercache
+
+# TypeScript
+*.tsbuildinfo
+
+# Testing
+coverage/
+.nyc_output/
+
+# Docker
+docker-compose.override.yml
+
+# Uploads (dev)
+uploads/
+
+# Temp
+tmp/
+temp/
+*.tmp
+*.bak
+
+_bmad*/
+.claude/
+*.zip
+docs/
