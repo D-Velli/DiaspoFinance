@@ -1,8 +1,9 @@
 name: Deploy
 
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:  # Manuel uniquement — activer push trigger quand la prod est prête
+  # push:
+  #   branches: [main]
 
 jobs:
   deploy-frontend:
