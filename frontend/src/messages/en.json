@@ -1,0 +1,76 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "close": "Close"
+  },
+  "auth": {
+    "signIn": "Sign in",
+    "signUp": "Create account",
+    "signOut": "Sign out",
+    "welcome": "Welcome, {name}"
+  },
+  "home": {
+    "brand": "DiaspoFinance",
+    "signIn": "Sign in",
+    "title": "The digital tontine",
+    "titleHighlight": "for the diaspora",
+    "subtitle": "Run a tontine without falling out with friends.",
+    "subtitleLine2": "Automatic collection, transparent distribution, zero stress.",
+    "cta": "Create a tontine",
+    "discover": "Discover how it works",
+    "howItWorks": "How it works",
+    "step1Title": "Create your tontine",
+    "step1Desc": "Set the amount, frequency and number of participants in a few clicks.",
+    "step2Title": "Invite your people",
+    "step2Desc": "Share a secure link. Each member joins and sets up automatic payment.",
+    "step3Title": "Automatic collection",
+    "step3Desc": "Contributions are collected automatically via Stripe. No more chasing anyone.",
+    "step4Title": "Transparent distribution",
+    "step4Desc": "The beneficiary receives the pot via Interac transfer. Every transaction is tracked.",
+    "trustTitle": "Trust in numbers",
+    "stat1Value": "150+",
+    "stat1Label": "Tontines completed",
+    "stat2Value": "$320,000",
+    "stat2Label": "Amounts distributed",
+    "stat3Value": "1,200+",
+    "stat3Label": "Active members",
+    "securityTitle": "Your money, safe and sound",
+    "security1Title": "Secure payments",
+    "security1Desc": "Powered by Stripe, the world leader in online payments. Your banking details never pass through our servers.",
+    "security2Title": "Zero hidden fees",
+    "security2Desc": "Transparent pricing. You know exactly what you pay, with no surprises.",
+    "security3Title": "Full traceability",
+    "security3Desc": "Every contribution and distribution is recorded. View the complete history at any time.",
+    "copyright": "© {year} DiaspoFinance. All rights reserved.",
+    "terms": "Terms of use",
+    "privacy": "Privacy policy"
+  },
+  "dashboard": {
+    "welcome": "Welcome, {name}",
+    "placeholder": "Your DiaspoFinance space is under construction."
+  },
+  "offline": {
+    "title": "Offline mode",
+    "message": "Reconnect to the Internet to access DiaspoFinance. Payment actions are not available offline.",
+    "retry": "Retry",
+    "banner": "Offline mode — displayed data may not be up to date"
+  },
+  "errors": {
+    "networkError": "Connection error — check your network",
+    "unauthorized": "Session expired — please sign in again",
+    "serverError": "Server error — please try again shortly"
+  },
+  "profile": {
+    "title": "Profile",
+    "language": "Language",
+    "french": "Français",
+    "english": "English"
+  }
+}

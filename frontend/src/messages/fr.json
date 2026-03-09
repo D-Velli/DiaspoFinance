@@ -1,0 +1,76 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "retry": "Réessayer",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "back": "Retour",
+    "next": "Suivant",
+    "close": "Fermer"
+  },
+  "auth": {
+    "signIn": "Se connecter",
+    "signUp": "Créer un compte",
+    "signOut": "Se déconnecter",
+    "welcome": "Bienvenue, {name}"
+  },
+  "home": {
+    "brand": "DiaspoFinance",
+    "signIn": "Se connecter",
+    "title": "La tontine digitale",
+    "titleHighlight": "pour la diaspora",
+    "subtitle": "Faites une tontine sans vous fâcher avec vos amis.",
+    "subtitleLine2": "Collecte automatique, distribution transparente, zéro stress.",
+    "cta": "Créer une tontine",
+    "discover": "Découvrir comment ça marche",
+    "howItWorks": "Comment ça marche",
+    "step1Title": "Créez votre tontine",
+    "step1Desc": "Définissez le montant, la fréquence et le nombre de participants en quelques clics.",
+    "step2Title": "Invitez vos proches",
+    "step2Desc": "Partagez un lien sécurisé. Chaque membre rejoint et configure son paiement automatique.",
+    "step3Title": "Collecte automatique",
+    "step3Desc": "Les contributions sont prélevées automatiquement via Stripe. Plus besoin de relancer personne.",
+    "step4Title": "Distribution transparente",
+    "step4Desc": "Le bénéficiaire reçoit le pot par virement Interac. Chaque transaction est tracée.",
+    "trustTitle": "La confiance en chiffres",
+    "stat1Value": "150+",
+    "stat1Label": "Tontines complétées",
+    "stat2Value": "320 000 $",
+    "stat2Label": "Montants distribués",
+    "stat3Value": "1 200+",
+    "stat3Label": "Membres actifs",
+    "securityTitle": "Votre argent en toute sécurité",
+    "security1Title": "Paiements sécurisés",
+    "security1Desc": "Propulsé par Stripe, leader mondial du paiement en ligne. Vos données bancaires ne transitent jamais par nos serveurs.",
+    "security2Title": "Zéro frais cachés",
+    "security2Desc": "Tarification transparente. Vous savez exactement ce que vous payez, sans mauvaise surprise.",
+    "security3Title": "Traçabilité complète",
+    "security3Desc": "Chaque contribution et distribution est enregistrée. Consultez l'historique complet à tout moment.",
+    "copyright": "© {year} DiaspoFinance. Tous droits réservés.",
+    "terms": "Conditions d'utilisation",
+    "privacy": "Politique de confidentialité"
+  },
+  "dashboard": {
+    "welcome": "Bienvenue, {name}",
+    "placeholder": "Votre espace DiaspoFinance est en cours de construction."
+  },
+  "offline": {
+    "title": "Mode hors-ligne",
+    "message": "Reconnectez-vous à Internet pour accéder à DiaspoFinance. Les actions de paiement ne sont pas disponibles hors-ligne.",
+    "retry": "Réessayer",
+    "banner": "Mode hors-ligne — les données affichées peuvent ne pas être à jour"
+  },
+  "errors": {
+    "networkError": "Erreur de connexion — vérifiez votre réseau",
+    "unauthorized": "Session expirée — reconnectez-vous",
+    "serverError": "Erreur serveur — réessayez dans quelques instants"
+  },
+  "profile": {
+    "title": "Profil",
+    "language": "Langue",
+    "french": "Français",
+    "english": "English"
+  }
+}
